@@ -25,6 +25,13 @@ void interaction() {
   isAnimate = true;
 }
 
+/**
+ デバッグ用
+ インタラクションの際にinteraction()を呼ぶ
+ 例)
+ // オーディオ入力の値が閾値異常ならアニメーション開始
+ if(audioInputValue > threshold) interaction();
+ */
 void mousePressed() {
   interaction();
 }
