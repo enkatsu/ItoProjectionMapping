@@ -7,6 +7,8 @@ class CircleAnimator {
     endPoint = endPoint_;
     startRadius = startRadius_;
     endRadius = endRadius_;
+    center = stratPoint.copy();
+    radius = startRadius;
   }
 
   /**

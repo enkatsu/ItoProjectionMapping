@@ -5,7 +5,10 @@ boolean isAnimate;
 void setup() {
   size(640, 360, P2D);
   // とりあえず手打ちで中心とかを書く
-  ca = new CircleAnimator(new PVector(0, 0), new PVector(0, 0), 0, 100);
+  ca = new CircleAnimator(
+    new PVector(width / 2, height / 2),
+    new PVector(width / 2, height / 2),
+    100, 10);
   fc = new FireCircle();
   isAnimate = false;
 }
@@ -16,7 +19,7 @@ void draw() {
 
   if (isAnimate) {
     ca.updateCircle();
-    //ca.drawDebugCircle();
+    ca.drawDebugCircle();
     fc.run(ca.getCenter(), ca.getRadius());
   }
 }
